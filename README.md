@@ -25,10 +25,12 @@ names      : Surface.Soil.Moisture.1, Surface.Soil.Moisture.2, Surface.Soil.Mois
 > 
  _Extender devuelve un objeto Ráster * con una extensión espacial mayor. El objeto Ráster de salida tiene las coordenadas externas mínima y máxima de los argumentos Ráster y Extensión de entrada. Por lo tanto, se incluyen todas las celdas del ráster original. Vea recortar si (también) desea eliminar filas o columnas. También hay un método de extensión para que los objetos de Extensión amplíen (o reduzcan) una Extensión. También puede usar la notación algebraica para hacer eso (ver ejemplos) Esta función ha reemplazado a la función "expandir" (para evitar un conflicto de nombre con el paquete Matrix)._
 
+###### Colocar el mapa mundial
 
 > maps::map("world", add =TRUE)
 
 
+###### colección de rasters de un subconjunto de datos
 
 > A <- stack(crop(s, drawExtent())
 > 
@@ -41,16 +43,23 @@ _En esta función se dibuja en el plot, la área de estudio que es nuestro inter
 _crop: devuelve un subconjunto geográfico de un objeto según lo especificado por un objeto de extensión (u objeto del cual se puede extraer / crear un objeto de extensión). Si x es un objeto ráster *, la extensión se alinea ax. Las áreas incluidas dentro y fuera de la extensión de x se ignoran (consulte extender si desea un área más grande)._    
 > 
 
+###### Definir un data frame de A (Aragoón)
 >df <- as.data.frame(A, xy=TRUE)
+>
+_Los data frames son estructuras de datos de dos dimensiones (rectangulares) que pueden contener datos de diferentes tipos, por lo tanto, son heterogéneas. Esta estructura de datos es la más usada para realizar análisis de datos_
 
+###### Guardar en el disco
 >saveRDS(df, file='Aragon.rds')
 >
  _la saveRDSfunción incorporada (o save) para conservar los objetos R en el disco._
+ 
+###### Visualizar A
 
 > plot(A)
 > 
 ![SSM_ENERO](https://user-images.githubusercontent.com/78845785/112160699-b5954980-8bea-11eb-915c-0511dcf8c5b8.JPG)
 
+###### Cálculo de medias semanales
 
 > semana1_na_true <- calc(A[[1:7]], mean, na.rm=TRUE)
 > 
