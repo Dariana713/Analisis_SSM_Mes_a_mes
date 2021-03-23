@@ -6,10 +6,10 @@
 > 
  _Loading required package: sp_
 
-> s <- stack(list.files(pattern = ".nc"), varname="ssm")
-> 
- _s
-class      : RasterStack 
+ > s <- stack(list.files(pattern = ".nc"), varname="ssm")
+ 
+
+ _class      : RasterStack 
 dimensions : 4144, 6832, 28311808, 31  (nrow, ncol, ncell, nlayers)
 resolution : 0.008928571, 0.008928571  (x, y)
 extent     : -11, 50, 35, 72  (xmin, xmax, ymin, ymax)
@@ -17,7 +17,6 @@ crs        : +proj=longlat +ellps=WGS84 +no_defs
 names      : Surface.Soil.Moisture.1, Surface.Soil.Moisture.2, Surface.Soil.Moisture.3, Surface.Soil.Moisture.4, Surface.Soil.Moisture.5, Surface.Soil.Moisture.6, Surface.Soil.Moisture.7, Surface.Soil.Moisture.8, Surface.Soil.Moisture.9, Surface.Soil.Moisture.10, Surface.Soil.Moisture.11, Surface.Soil.Moisture.12, Surface.Soil.Moisture.13, Surface.Soil.Moisture.14, Surface.Soil.Moisture.15, ..._
 
 > list.files = Estas funciones producen un vector de caracteres de los nombres de archivos o directorios en el directorio nombrado.
-
 
 >
 > library(maps)
@@ -49,12 +48,13 @@ _crop: devuelve un subconjunto geográfico de un objeto según lo especificado p
  _la saveRDSfunción incorporada (o save) para conservar los objetos R en el disco._
 
 > plot(A)
+> 
 ![SSM_ENERO](https://user-images.githubusercontent.com/78845785/112160699-b5954980-8bea-11eb-915c-0511dcf8c5b8.JPG)
 
 
 > semana1_na_true <- calc(A[[1:7]], mean, na.rm=TRUE)
 > 
-> _class      : RasterLayer 
+ _class      : RasterLayer 
 dimensions : 473, 566, 267718  (nrow, ncol, ncell)
 resolution : 0.008928571, 0.008928571  (x, y)
 extent     : -3.428571, 1.625, 39.59821, 43.82143  (xmin, xmax, ymin, ymax)
@@ -64,7 +64,7 @@ names      : layer
 values     : 0, 126.5  (min, max)_
 
 > plot(semana1_na_true)
-> 
+>
 ![SSM_enero_parte de Aragon_ media semanal](https://user-images.githubusercontent.com/78845785/112161131-1e7cc180-8beb-11eb-846a-d16553e7ec53.JPG)
 
 > semana1_na_false <- calc(A[[1:7]], mean, na.rm=FALSE)
@@ -79,6 +79,6 @@ names      : layer
 values     : NA, NA  (min, max)_
 
 > plot(semana1_na_false)
-> 
+
  ![SSM_enero_parte de Aragon_ media semanal_false](https://user-images.githubusercontent.com/78845785/112163622-803e2b00-8bed-11eb-9e88-e3ae9a342a61.JPG)
   
