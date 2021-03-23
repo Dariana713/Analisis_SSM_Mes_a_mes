@@ -1,10 +1,15 @@
 # Analisis_SSM_Mes_a_mes
 
+###### ubicación del directorio de trabajo
+
 > setwd("~/Análisis de Tesis en Rstudio y SAGA GIS/Variables/Humedad/SSM_Bir  2020/1_Enero_SSM_Bir_2020")
- 
+>
+##### Cargar librería raster
 > library(raster)
 > 
  _Loading required package: sp_
+ 
+ ##### Unificar archivos
 
  > s <- stack(list.files(pattern = ".nc"), varname="ssm")
  
@@ -18,7 +23,9 @@ names      : Surface.Soil.Moisture.1, Surface.Soil.Moisture.2, Surface.Soil.Mois
 
 > list.files = Estas funciones producen un vector de caracteres de los nombres de archivos o directorios en el directorio nombrado.
 
->
+
+##### Cargar libreria Map
+
 > library(maps)
 >
 > plot(extent(s))
