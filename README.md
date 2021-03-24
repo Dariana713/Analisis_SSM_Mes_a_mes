@@ -99,3 +99,11 @@ values     : NA, NA  (min, max)_
 
  ![SSM_enero_parte de Aragon_ media semanal_false](https://user-images.githubusercontent.com/78845785/112163622-803e2b00-8bed-11eb-9e88-e3ae9a342a61.JPG)
   
+##### Cáculo de medias díarias 
+> dia1_na_true <- calc(A[[7:10]], mean, na.rm=TRUE)
+la media dia de los datos de humedad disponibles desde el día 7 al 10, ya el día 11 no hay información disponible.
+
+> plot (dia1_na_true)
+
+![SSM_media (7_10 dia)_enero_2020](https://user-images.githubusercontent.com/78845785/112344714-aaaee780-8cc4-11eb-95d2-248a85af7771.JPG)
+
