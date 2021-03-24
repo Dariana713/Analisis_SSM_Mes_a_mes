@@ -101,6 +101,7 @@ values     : NA, NA  (min, max)_
   
 ##### Cáculo de medias díarias 
 > dia1_na_true <- calc(A[[7:10]], mean, na.rm=TRUE)
+> 
 la media dia de los datos de humedad disponibles desde el día 7 al 10, ya el día 11 no hay información disponible.
 
 > plot (dia1_na_true)
