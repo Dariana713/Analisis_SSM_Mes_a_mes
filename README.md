@@ -1,4 +1,5 @@
 # Analisis_SSM_Mes_a_mes
+Estas variables responden al ciclo hidrológico donde se estudiará uno de los principales almacenamientos de agua subterránea, como es la humedad del suelo y las relaciones con cada una de estas variables (vegetación, meteorología, geo morfometría). Por lo que se muestra el analisis en Rstudio de la varaible de humdedad del suelo.
 
 ###### ubicación del directorio de trabajo
 
