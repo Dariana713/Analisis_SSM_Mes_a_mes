@@ -1,5 +1,5 @@
-# Analisis_SSM_Mes_a_mes
-Estas variables responden al ciclo hidrológico donde se estudiará uno de los principales almacenamientos de agua subterránea, como es la humedad del suelo y las relaciones con cada una de estas variables (vegetación, meteorología, geo morfometría). Por lo que se muestra el analisis en Rstudio de la varaible de humedad del suelo, se parte de un archivo ".nc".
+# Análisis SSM Mes a mes
+SSM (Surface soil moisture). Estas variables responden al ciclo hidrológico donde se estudiará uno de los principales almacenamientos de agua subterránea, como es la humedad del suelo y las relaciones con cada una de estas variables (vegetación, meteorología, geo morfometría). Por lo que se muestra el analisis en Rstudio de la varaible de humedad del suelo, se parte de un archivo ".nc". 
 
 ###### ubicación del directorio de trabajo
 
@@ -108,7 +108,7 @@ la media dia de los datos de humedad disponibles desde el día 7 al 10, ya el d�
 
 ![SSM_media (7_10 dia)_enero_2020](https://user-images.githubusercontent.com/78845785/112344714-aaaee780-8cc4-11eb-95d2-248a85af7771.JPG)
 
-###### Cálculo de medias a nivel de España
+#### Cálculo de medias a nivel de España
 
 > diaSSM_7_10na_true <- calc(A[[5:10]], mean, na.rm=TRUE)
 > 
@@ -122,6 +122,16 @@ la media dia de los datos de humedad disponibles desde el día 7 al 10, ya el d�
 > 
 ![diaSSM_16_21na_true](https://user-images.githubusercontent.com/78845785/112898518-353a8100-90e1-11eb-8e36-3b4ef2f90117.JPG)
 
+> _diaSSM_16_21na_true_
+
+> _class      : RasterLayer 
+dimensions : 910, 1748, 1590680  (nrow, ncol, ncell)
+resolution : 0.008928571, 0.008928571  (x, y)
+extent     : -9.642857, 5.964286, 35.58929, 43.71429  (xmin, xmax, ymin, ymax)
+crs        : +proj=longlat +ellps=WGS84 +no_defs 
+source     : C:/Users/Usuario/AppData/Local/Temp/Rtmpwlmh2b/raster/r_tmp_2021-03-29_224508_6392_78567.grd 
+names      : layer 
+values     : 0, 126.5  (min, max)_
 
 
 
