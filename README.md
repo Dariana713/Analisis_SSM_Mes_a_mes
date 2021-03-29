@@ -108,3 +108,21 @@ la media dia de los datos de humedad disponibles desde el día 7 al 10, ya el d�
 
 ![SSM_media (7_10 dia)_enero_2020](https://user-images.githubusercontent.com/78845785/112344714-aaaee780-8cc4-11eb-95d2-248a85af7771.JPG)
 
+###### Cálculo de medias a nivel de España
+
+> diaSSM_7_10na_true <- calc(A[[5:10]], mean, na.rm=TRUE)
+> 
+> plot(diaSSM_7_10na_true)
+> 
+> writeRaster(diaSSM_7_10na_true, file="DíaSSM_5_10_enero.tif")
+> 
+> diaSSM_16_21na_true <- calc(A[[16:21]], mean, na.rm=TRUE)
+> 
+> plot(diaSSM_16_21na_true)
+> 
+![diaSSM_16_21na_true](https://user-images.githubusercontent.com/78845785/112898518-353a8100-90e1-11eb-8e36-3b4ef2f90117.JPG)
+
+
+
+
+> writeRaster(diaSSM_16_21na_true, file="DíaSSM_16_21_enero.tif")
