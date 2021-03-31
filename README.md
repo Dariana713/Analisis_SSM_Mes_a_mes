@@ -14,7 +14,19 @@ SSM (Surface soil moisture). Estas variables responden al ciclo hidrológico don
 
  > s <- stack(list.files(pattern = ".nc"), varname="ssm")
  
+ ###### _como se lee_
+ 
+Genera un objeto "S" que es el resultado de hacer un raster "stack" de todos los elementos de la lista de archivos que hay en la carpeta de trabajo que tienen la extención ".nc"
+ 
+"S" es de stack. Esta funcion lee todos los archivos del directorio de trabajo en un raster stack. Y con list.file selecciona todos los achivos que contiene, entonces se coloca la opción _pattern_, para seleccionar solo  los ".nc" como estos archivos tienen ruido, solo colocamos los datos de "ssm", que es de la de humedad sin error. 
+ 
+ > _stack 
+> 
+ _La función stack nos permite hacer una coleccion de rasters que posean la extensión y resolución espacial._
+ 
+ > _list.files = Estas funciones producen un vector de caracteres de los nombres de archivos o directorios en el directorio nombrado._
 
+###### caracteristicas generales del raster stack 
  _class      : RasterStack 
 dimensions : 4144, 6832, 28311808, 31  (nrow, ncol, ncell, nlayers)
 resolution : 0.008928571, 0.008928571  (x, y)
@@ -22,7 +34,7 @@ extent     : -11, 50, 35, 72  (xmin, xmax, ymin, ymax)
 crs        : +proj=longlat +ellps=WGS84 +no_defs 
 names      : Surface.Soil.Moisture.1, Surface.Soil.Moisture.2, Surface.Soil.Moisture.3, Surface.Soil.Moisture.4, Surface.Soil.Moisture.5, Surface.Soil.Moisture.6, Surface.Soil.Moisture.7, Surface.Soil.Moisture.8, Surface.Soil.Moisture.9, Surface.Soil.Moisture.10, Surface.Soil.Moisture.11, Surface.Soil.Moisture.12, Surface.Soil.Moisture.13, Surface.Soil.Moisture.14, Surface.Soil.Moisture.15, ..._
 
-> list.files = Estas funciones producen un vector de caracteres de los nombres de archivos o directorios en el directorio nombrado.
+
 
 
 ##### Cargar libreria Map
@@ -42,11 +54,10 @@ names      : Surface.Soil.Moisture.1, Surface.Soil.Moisture.2, Surface.Soil.Mois
 
 > A <- stack(crop(s, drawExtent())
 > 
+El crop es del objeto que se extraera la información, de "s", y se dibuja la zona de estención.
+
 _En esta función se dibuja en el plot, la área de estudio que es nuestro interes_ 
 
-> stack 
-> 
- _La función stack nos permite hacer una coleccion de rasters que posean la extensión y resolución espacial._
 > 
 _crop: devuelve un subconjunto geográfico de un objeto según lo especificado por un objeto de extensión (u objeto del cual se puede extraer / crear un objeto de extensión). Si x es un objeto ráster *, la extensión se alinea ax. Las áreas incluidas dentro y fuera de la extensión de x se ignoran (consulte extender si desea un área más grande)._    
 > 
