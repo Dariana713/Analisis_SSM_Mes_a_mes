@@ -51,7 +51,10 @@ _En esta función se dibuja en el plot, la área de estudio que es nuestro inter
 _crop: devuelve un subconjunto geográfico de un objeto según lo especificado por un objeto de extensión (u objeto del cual se puede extraer / crear un objeto de extensión). Si x es un objeto ráster *, la extensión se alinea ax. Las áreas incluidas dentro y fuera de la extensión de x se ignoran (consulte extender si desea un área más grande)._    
 > 
 
-###### Definir un data frame de A (Aragoón)
+###### Definir un data frame de A (Aragón)
+
+En este caso se esta trabajandocon una escala nacional que es España, para los analisis del mes de enero se utilizo el nombre de Aragón, pero el area de estudio es España.
+
 >df <- as.data.frame(A, xy=TRUE)
 >
 _Los data frames son estructuras de datos de dos dimensiones (rectangulares) que pueden contener datos de diferentes tipos, por lo tanto, son heterogéneas. Esta estructura de datos es la más usada para realizar análisis de datos_
