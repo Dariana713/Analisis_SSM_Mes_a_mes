@@ -81,7 +81,7 @@ _Los data frames son estructuras de datos de dos dimensiones (rectangulares) que
 > 
 ![SSM_ENERO](https://user-images.githubusercontent.com/78845785/112160699-b5954980-8bea-11eb-915c-0511dcf8c5b8.JPG)
 
-###### Cálculo de medias semanales
+###### Cálculo de promedios de 5 dias antes + dia de NDVI (6 DIAS) (dias de NDVI 1, 11, 21) al mes
 
 > semana1_na_true <- calc(A[[1:7]], mean, na.rm=TRUE)
 > 
