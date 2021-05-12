@@ -81,8 +81,7 @@ _Los data frames son estructuras de datos de dos dimensiones (rectangulares) que
 > 
 ![SSM_ENERO](https://user-images.githubusercontent.com/78845785/112160699-b5954980-8bea-11eb-915c-0511dcf8c5b8.JPG)
 
-###### Cálculo de promedios de 5 dias antes + dia de NDVI (6 DIAS) (dias de NDVI 1, 11, 21) al mes
-
+###### Cálculo medias semanales
 > semana1_na_true <- calc(A[[1:7]], mean, na.rm=TRUE)
 > 
  _class      : RasterLayer 
@@ -122,7 +121,7 @@ la media dia de los datos de humedad disponibles desde el día 7 al 10, ya el d�
 
 ![SSM_media (7_10 dia)_enero_2020](https://user-images.githubusercontent.com/78845785/112344714-aaaee780-8cc4-11eb-95d2-248a85af7771.JPG)
 
-#### Cálculo de medias a nivel de España
+#### Cálculo de promedios de 5 dias antes + dia de NDVI (6 DIAS) (dias de NDVI 1, 11, 21) al mes
 
 > diaSSM_7_10na_true <- calc(A[[5:10]], mean, na.rm=TRUE)
 > 
